@@ -1,0 +1,72 @@
+<header class="px-7 pt-12 lg:mx-auto xl:w-[1100px]">
+	<div class="flex items-center justify-between">
+		<a href="/" class="block"><img src="/images/logo.svg" alt="logo" /></a>
+		<nav class="hidden md:block">
+			<ul class="flex items-center space-x-10 text-white">
+				<li><a href="#">About</a></li>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">Events</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">Support</a></li>
+			</ul>
+		</nav>
+		<nav
+			class="fixed bottom-0 left-0 top-0 z-20 w-full translate-x-full bg-black px-7 pt-12 text-white duration-300 ease-in-out md:hidden"
+			id="menu-sm"
+		>
+			<div class="flex items-center justify-between">
+				<a href="/" class="block"><img src="/images/logo.svg" alt="logo" /></a>
+				<button class="block md:hidden" id="close">
+					<img src="/images/icon-close.svg" alt="icon close" />
+				</button>
+			</div>
+			<ul
+				class="mt-24 flex flex-col space-y-7 font-josefin text-2xl font-light uppercase"
+			>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">Events</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">Support</a></li>
+			</ul>
+		</nav>
+		<button class="block md:hidden" id="open">
+			<img src="/images/icon-hamburger.svg" alt="icon hamburger" />
+		</button>
+	</div>
+	<p
+		class="mt-40 border border-white p-4 text-left font-josefin font-thin uppercase text-white lg:mt-52"
+	>
+		Immersive experiences that <br class="md:hidden" /> deliver
+	</p>
+</header>
+
+<style>
+	p {
+		font-size: 2.7rem;
+		line-height: 1;
+	}
+
+	@media (min-width: 768px) {
+		p {
+			font-size: 4.5rem;
+			@apply w-[600px] p-8;
+		}
+	}
+</style>
+
+<script is:inline>
+	const open = document.getElementById('open')
+	const close = document.getElementById('close')
+	const menuSm = document.getElementById('menu-sm')
+
+	open.addEventListener('click', () => {
+		menuSm.classList.remove('translate-x-full')
+		menuSm.classList.add('translate-x-0')
+	})
+
+	close.addEventListener('click', () => {
+		menuSm.classList.remove('translate-x-0')
+		menuSm.classList.add('translate-x-full')
+	})
+</script>
