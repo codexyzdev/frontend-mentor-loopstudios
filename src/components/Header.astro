@@ -1,13 +1,14 @@
+---
+import Link from './Link.astro'
+const listLink = ['About', 'Careers', 'Events', 'Products', 'Support']
+---
+
 <header class="px-7 pt-12 lg:mx-auto xl:w-[1100px]">
 	<div class="flex items-center justify-between">
 		<a href="/" class="block"><img src="/images/logo.svg" alt="logo" /></a>
 		<nav class="hidden md:block">
 			<ul class="flex items-center space-x-10 text-white">
-				<li><a href="#">About</a></li>
-				<li><a href="#">Careers</a></li>
-				<li><a href="#">Events</a></li>
-				<li><a href="#">Products</a></li>
-				<li><a href="#">Support</a></li>
+				{listLink.map((link) => <Link text={link} />)}
 			</ul>
 		</nav>
 		<nav
@@ -23,11 +24,7 @@
 			<ul
 				class="mt-24 flex flex-col space-y-7 font-josefin text-2xl font-light uppercase"
 			>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Careers</a></li>
-				<li><a href="#">Events</a></li>
-				<li><a href="#">Products</a></li>
-				<li><a href="#">Support</a></li>
+				{listLink.map((link) => <Link text={link} />)}
 			</ul>
 		</nav>
 		<button class="block md:hidden" id="open">
