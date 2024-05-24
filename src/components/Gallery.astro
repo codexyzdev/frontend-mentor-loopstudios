@@ -1,0 +1,148 @@
+<div class="grid grid-cols-1 gap-4 md:grid-cols-4 ">
+	<a href="#">
+		<span
+			class="absolute bottom-2 left-4 text-xl font-light uppercase tracking-widest text-white"
+			>deep <br /> earth</span
+		>
+		<picture>
+			<source
+				srcset="/images/desktop/image-deep-earth.jpg"
+				media="(min-width: 768px)"
+			/>
+			<img src="/images/mobile/image-deep-earth.jpg" alt="deep earth" />
+		</picture>
+	</a>
+	<a href="#">
+		<span
+			class="absolute bottom-2 left-4 text-xl font-light uppercase tracking-widest text-white"
+			>night <br /> arcade</span
+		>
+		<picture>
+			<source
+				srcset="/images/desktop/image-night-arcade.jpg"
+				media="(min-width: 768px)"
+			/>
+			<img src="/images/mobile/image-night-arcade.jpg" alt="night arcade" />
+		</picture>
+	</a>
+	<a href="#">
+		<span
+			class="absolute bottom-2 left-4 text-xl font-light uppercase tracking-widest text-white"
+			>soccer <br /> team</span
+		>
+		<picture>
+			<source
+				srcset="/images/desktop/image-soccer-team.jpg"
+				media="(min-width: 768px)"
+			/>
+			<img src="/images/mobile/image-soccer-team.jpg" alt="soccer team" />
+		</picture>
+	</a>
+	<a href="#">
+		<span
+			class="absolute bottom-2 left-4 text-xl font-light uppercase tracking-widest text-white"
+			>the <br /> grid</span
+		>
+		<picture>
+			<source
+				srcset="/images/desktop/image-grid.jpg"
+				media="(min-width: 768px)"
+			/>
+			<img src="/images/mobile/image-grid.jpg" alt="grid" />
+		</picture>
+	</a>
+	<a href="#">
+		<span
+			class="absolute bottom-2 left-4 text-xl font-light uppercase tracking-widest text-white"
+			>from <br /> above</span
+		>
+		<picture>
+			<source
+				srcset="/images/desktop/image-from-above.jpg"
+				media="(min-width: 768px)"
+			/>
+			<img src="/images/mobile/image-from-above.jpg" alt="from above" />
+		</picture>
+	</a>
+	<a href="#">
+		<span
+			class="absolute bottom-2 left-4 text-xl font-light uppercase tracking-widest text-white"
+			>pocket <br /> borealis</span
+		>
+		<picture>
+			<source
+				srcset="/images/desktop/image-pocket-borealis.jpg"
+				media="(min-width: 768px)"
+			/>
+			<img
+				src="/images/mobile/image-pocket-borealis.jpg"
+				alt="pocket borealis"
+			/>
+		</picture>
+	</a>
+	<a href="#">
+		<span
+			class="absolute bottom-2 left-4 text-xl font-light uppercase tracking-widest text-white"
+			>the <br /> curiosity</span
+		>
+		<picture>
+			<source
+				srcset="/images/desktop/image-curiosity.jpg"
+				media="(min-width: 768px)"
+			/>
+			<img src="/images/mobile/image-curiosity.jpg" alt="curiosity" />
+		</picture>
+	</a>
+	<a href="#">
+		<span
+			class="absolute bottom-2 left-4 text-xl font-light uppercase tracking-widest text-white"
+			>make it <br /> your own</span
+		>
+		<picture>
+			<source
+				srcset="/images/desktop/image-fisheye.jpg"
+				media="(min-width: 768px)"
+			/>
+			<img src="/images/mobile/image-fisheye.jpg" alt="fisheye" />
+		</picture>
+	</a>
+</div>
+
+<style>
+	a {
+		position: relative;
+		display: block;
+		
+	}
+	span {
+		@apply transition-colors duration-300 ease-in-out;
+		z-index: 30;
+	}
+
+	picture {
+		postion: relative;
+	}
+	
+	picture::after {
+		@apply transition-colors duration-300 ease-in-out;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	a:hover picture::after {
+		background-color: rgba(255, 255, 255, 0.8);
+	}
+	a:hover span {
+		color: rgba(0, 0, 0, 0.7);
+	}
+
+	@media(min-width: 768px){
+		span{
+			@apply text-3xl
+		}
+	}
+</style>

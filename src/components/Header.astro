@@ -2,8 +2,8 @@
 import Link from './Link.astro'
 const listLink = ['About', 'Careers', 'Events', 'Products', 'Support']
 ---
-
-<header class="px-7 pt-12 lg:mx-auto xl:w-[1100px]">
+<header class="px-7 pt-12 lg:mx-auto xl:w-[1100px]"
+>
 	<div class="flex items-center justify-between">
 		<a href="/" class="block"><img src="/images/logo.svg" alt="logo" /></a>
 		<nav class="hidden md:block">
@@ -31,21 +31,21 @@ const listLink = ['About', 'Careers', 'Events', 'Products', 'Support']
 			<img src="/images/icon-hamburger.svg" alt="icon hamburger" />
 		</button>
 	</div>
-	<p
-		class="mt-40 border border-white p-4 text-left font-josefin font-thin uppercase text-white lg:mt-52"
+	<h1
+		class="mt-40 border border-white p-4 text-left font-josefin font-thin uppercase text-white text-opacity-80 lg:mt-52"
 	>
 		Immersive experiences that <br class="md:hidden" /> deliver
-	</p>
+	</h1>
 </header>
 
 <style>
-	p {
+	h1 {
 		font-size: 2.7rem;
 		line-height: 1;
 	}
 
 	@media (min-width: 768px) {
-		p {
+		h1 {
 			font-size: 4.5rem;
 			@apply w-[600px] p-8;
 		}

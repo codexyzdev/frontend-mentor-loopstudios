@@ -1,0 +1,56 @@
+---
+const listLink = ['About', 'Careers', 'Events', 'Products', 'Support']
+import Link from '../components/Link.astro'
+import Section from './Section.astro'
+---
+
+<footer class="bg-black p-8 text-center text-white mt-20">
+    <Section>
+        <div class="md:flex md:justify-between md:items-center ">
+        <div class="md:flex md:flex-col md:gap-4" >
+            <a href="#" class=" inline-block mb-4 md:mb-0"
+                ><img src="images/logo.svg" alt="logo" /></a
+            >
+            <ul class=" flex flex-col items-center justify-center gap-4 md:flex-row">
+                {listLink.map((link) => <Link text={link} />)}
+            </ul>
+        </div>
+        <div class="md:flex md:flex-col md:gap-3 mt-4 md:mt-0">
+            <div class=" flex items-center justify-center gap-4 mb-4 md:mb-0 md:self-end">
+                <a href="/"><img src="images/icon-facebook.svg" alt=" facebook" /></a>
+                <a href="/"><img src="images/icon-twitter.svg" alt=" twitter" /></a>
+                <a href="/"
+                    ><img src="images/icon-pinterest.svg" alt=" pinterest" /></a
+                >
+                <a href="/"
+                    ><img src="images/icon-instagram.svg" alt=" instagram" /></a
+                >
+            </div>
+            <p class="md:mt-3 opacity-80">© Copyright 2021 Loopstudios. All Rights Reserved.</p>
+        </div>
+        </div>
+    </Section>
+</footer>
+
+<style>
+    a{
+		position: relative;
+	}
+	a::after{
+	content: '';
+	position: absolute;
+	width: 70%;
+	transform: scaleX(0) translateX(-50%);
+	height: 2px;
+	bottom: -0.5rem;
+	left: 50%;
+	background-color: white;
+	
+	transition: transform 0.3s ease-out;
+		}
+
+	a:hover::after{
+		transform: scaleX(1) translateX(-50%);
+		
+	}
+</style>

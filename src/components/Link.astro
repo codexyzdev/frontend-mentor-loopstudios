@@ -7,3 +7,29 @@ const { text } = Astro.props
 ---
 
 <li><a href='#'>{text}</a></li>
+
+<style> 
+	a{
+		position: relative;
+	}
+	a::after{
+	content: '';
+	position: absolute;
+	width: 70%;
+	transform: scaleX(0) translateX(-50%);
+	height: 2px;
+	bottom: -0.5rem;
+	left: 50%;
+	background-color: white;
+	
+	transition: transform 0.3s ease-out;
+		}
+
+	a:hover::after{
+		transform: scaleX(1) translateX(-50%);
+		
+	}
+
+		
+	
+</style>
